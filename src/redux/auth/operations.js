@@ -43,7 +43,7 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      console.log(error)
+      console.log(error.message);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -77,7 +77,7 @@ export const refreshUser = createAsyncThunk(
       try {
         // Як що є токен, тоді додаєм його до HTTP хедеру і робимо запит
         setAuthHeader(persistedToken);
-        const res = await axios.get('/users/me');
+        const res = await axios.get('/users/current');
         return res.data;
       } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

@@ -11,12 +11,14 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-// import { authReducer } from './auth/authSlice';
+import { authReducer } from './auth/authSlice';
+import { phoneBookReducer } from './contacts/contactsSlice';
+import { contactsfilterSlice } from './contacts/contactsFilterSlice';
 
 const persistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token'],
+  whitelist: ["token"],
 };
 
 const middleware = [
@@ -27,12 +29,16 @@ const middleware = [
   }),
 ];
 
-const persistorReducer = persistReducer(persistConfig, rootReducer);
+const persistorReducer = persistReducer(persistConfig, authReducer);
 
 export const store = configureStore({
-  reducer:
-    persistorReducer,
-   middleware,
+  reducer: {
+    auth: persistorReducer,
+    contacts: phoneBookReducer,
+    filter: contactsfilterSlice,
+  },
+  // rootReducer,
+  middleware,
   devTools: process.env.NODE_ENV === 'development',
 });
 

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid'
 import { WraperForm, Input, BtnSubmit, Label } from './form.styled';
 import { addContact } from 'redux/contacts/operations';
-import { selectContacts } from 'redux/contacts/selectors';
+import { selectContacts } from 'redux/selectors';
 
 
 const Form = ()=> {

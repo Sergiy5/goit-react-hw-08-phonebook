@@ -2,7 +2,7 @@ import { Container } from 'components/mainContainer.styled';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
-import { selectError, selectIsLoading } from 'redux/contacts/selectors';
+import { selectError, selectIsLoading } from 'redux/selectors';
 import ContactsList from 'components/Contacts/contacts';
 import Filter from 'components/Filter/filter';
 import Form from 'components/Form/form';
