@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { register, logIn, logOut, refreshUser } from './operations';
-import {initialState} from './initialState'
+import {initialState} from './authInitialState'
 import { logOutFulfilled, refreshUserFulfilled, refreshUserPending, refreshUserRejected, signInFulfilled } from './authActionsStatus';
 
 const authSlice = createSlice({

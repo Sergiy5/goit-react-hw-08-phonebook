@@ -1,11 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import {
-  ButtonStyled,
   FormStyled,
-  InputStyled,
-  LabelStyled,
-} from '../Styled/formStyled.styled';
+ } from '../Styled/formStyled.styled';
+import Button from '@mui/material/Button';
+import { TextField } from '@mui/material';
+import { nanoid } from 'nanoid';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -24,15 +24,25 @@ export const LoginForm = () => {
 
   return (
     <FormStyled onSubmit={handleSubmit} autoComplete="on">
-      <LabelStyled >
-        Email
-        <InputStyled type="email" name="email" />
-      </LabelStyled>
-      <LabelStyled >
-        Password
-        <InputStyled type="password" name="password" />
-      </LabelStyled>
-      <ButtonStyled type="submit">Log In</ButtonStyled>
+      <TextField
+        id={nanoid()}
+        label="Email"
+        name="email"
+        type="email"
+        variant="outlined"
+        margin="normal"
+      />
+      <TextField
+        id={nanoid()}
+        label="Password"
+        name="password"
+        type="password"
+        variant="outlined"
+        margin="normal"
+      />
+      <Button variant="contained" type="submit">
+        Log In
+      </Button>
     </FormStyled>
   );
 };

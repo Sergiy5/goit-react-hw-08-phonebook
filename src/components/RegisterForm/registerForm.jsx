@@ -1,10 +1,9 @@
+import { Button, TextField } from '@mui/material';
+import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import {
-  ButtonStyled,
   FormStyled,
-  InputStyled,
-  LabelStyled,
 } from '../Styled/formStyled.styled';
 
 export const RegisterForm = () => {
@@ -24,20 +23,35 @@ export const RegisterForm = () => {
   };
 
   return (
-    <FormStyled  onSubmit={handleSubmit} autoComplete="on">
-      <LabelStyled>
-        Username
-        <InputStyled type="text" name="name" />
-      </LabelStyled>
-      <LabelStyled>
-        Email
-        <InputStyled type="email" name="email" />
-      </LabelStyled>
-      <LabelStyled>
-        Password
-        <InputStyled type="password" name="password" />
-      </LabelStyled>
-      <ButtonStyled type="submit">Register</ButtonStyled>
+    <FormStyled onSubmit={handleSubmit} autoComplete="on">
+      <TextField
+        // label={'margin="normal"'}
+        id={nanoid()}
+        label="Username"
+        name="name"
+        type="text"
+        variant="outlined"
+        margin="normal"
+      />
+      <TextField
+        id={nanoid()}
+        label="Email"
+        name="email"
+        type="email"
+        variant="outlined"
+        margin="normal"
+      />
+      <TextField
+        id={nanoid()}
+        label="Password"
+        name="password"
+        type="password"
+        variant="outlined"
+        margin="normal"
+      />
+      <Button variant="contained" type="submit">
+        Register
+      </Button>
     </FormStyled>
   );
 };

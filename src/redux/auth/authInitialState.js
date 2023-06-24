@@ -1,6 +1,7 @@
 export const initialState = {
-  auth: {user: { name: null, email: null },
+  auth: {user: { name: '', email: '' },
   token: null,
   isLoggedIn: false,
-  isRefreshing: false},
+  isRefreshing: false,
+  },
 };

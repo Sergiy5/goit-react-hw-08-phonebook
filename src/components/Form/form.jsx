@@ -39,8 +39,8 @@ const Form = ()=> {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
       <WraperForm>
+    <form onSubmit={handleSubmit}>
         <Label htmlFor="nameInput" className="lableInputName">
           Name
         </Label>
@@ -68,8 +68,8 @@ const Form = ()=> {
         <BtnSubmit type="submit" className="btnSubmit">
           Add contact
         </BtnSubmit>
-      </WraperForm>
     </form>
+      </WraperForm>
   );
 };
 

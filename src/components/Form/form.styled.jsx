@@ -3,14 +3,16 @@ import styled from "styled-components";
 export const WraperForm = styled.div`
     display: flex;
     flex-direction: column;
+    text-align: start;
     padding: 15px;
     width: 500px;
     border: 4px solid blue;
     border-radius: 8px;
 `
 export const Label = styled.label`
-    margin: 0 10px;       
-    `
+  display: flex;
+  margin: 0 10px;
+`;
 export const Input = styled.input`
     margin: 10px;
     font-size: 26px;

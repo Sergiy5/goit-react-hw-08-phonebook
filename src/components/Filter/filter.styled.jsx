@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const WraperFilter = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    padding: 15px;
-    border: 3px solid blue; 
-    border-radius: 7px;
-`
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 500px;
+  padding: 15px;
+  border: 3px solid blue;
+  border-radius: 7px;
+`;
 export const Label = styled.label`
     margin: 0 10px;       
     `

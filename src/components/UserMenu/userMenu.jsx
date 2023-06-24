@@ -1,10 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
-import { BtnLogOutStyled, ParagrafStyled, Wraper } from './userMenu.styled';
-// import { ButtonStyled } from 'components/Styled/formStyled.styled';
-// import { Container } from 'components/mainContainer.styled';
-
+import { ParagrafStyled, Wraper } from './userMenu.styled';
+import { Button } from '@mui/material';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -12,10 +10,14 @@ export const UserMenu = () => {
   
   return (
     <Wraper>
-      <ParagrafStyled>Welcome {user.name} </ParagrafStyled>
-      <BtnLogOutStyled type="button" onClick={() => dispatch(logOut())}>
+      <ParagrafStyled>{user.email} </ParagrafStyled>
+      <Button
+        variant="contained"
+        type="button"
+        onClick={() => dispatch(logOut())}
+      >
         Logout
-      </BtnLogOutStyled>
+      </Button>
     </Wraper>
   );
 };
