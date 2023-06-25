@@ -23,9 +23,8 @@ export const RegisterForm = () => {
   };
 
   return (
-    <FormStyled onSubmit={handleSubmit} autoComplete="on">
+    <FormStyled onSubmit={handleSubmit} autoComplete="off">
       <TextField
-        // label={'margin="normal"'}
         id={nanoid()}
         label="Username"
         name="name"
