@@ -11,8 +11,6 @@ export const AuthNav = () => {
       <Button variant="contained" component={NavLink} to="/login">
         Log In
       </Button>
-      {/* <AuthNavLinkStyled to="/register">Register</AuthNavLinkStyled> */}
-      {/* <AuthNavLinkStyled to="/login">Log In</AuthNavLinkStyled> */}
     </AuthNavContainer>
   );
 };
