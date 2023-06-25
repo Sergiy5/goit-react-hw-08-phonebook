@@ -10,7 +10,7 @@ export const UserMenu = () => {
   
   return (
     <Wraper>
-      <ParagrafStyled>{user.email} </ParagrafStyled>
+      <ParagrafStyled>{user.email}</ParagrafStyled>{" "}
       <Button
         variant="contained"
         type="button"
